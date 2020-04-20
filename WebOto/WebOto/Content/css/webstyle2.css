@@ -1,0 +1,108 @@
+﻿.home-social {
+    float: left;
+    width: 100%;
+    background-color: #f6f6f6;
+    border-top: 1px solid #e1e1e1;
+    padding: 30px 0;
+}
+
+    .home-social .item {
+        border-bottom: 1px solid #D5D5D5;
+        padding: 5px 0 0 35px;
+        position: relative;
+        font-size: 12px;
+    }
+
+        .home-social .item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .home-social .item a {
+            color: #C71444;
+        }
+
+    .home-social .favicon {
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        left: 0;
+        top: 10px;
+        background-image: url("statics/social.png");
+        background-repeat: no-repeat;
+        background-color: #666;
+        background-size: 89px;
+        text-indent: -9999px;
+        border-radius: 2px;
+        display: block;
+        outline: none;
+    }
+
+    .home-social .youtube .favicon {
+        background-position: -65px 1px;
+    }
+
+    .home-social .facebook .favicon {
+        background-position: 1px 0px;
+    }
+
+    .home-social .twitter .favicon {
+        background-position: -43px 2px;
+    }
+
+    .home-social .youtube .favicon:hover {
+        background-color: #C3191E;
+    }
+
+    .home-social .facebook .favicon:hover {
+        background-color: #3B5998;
+    }
+
+    .home-social .twitter .favicon:hover {
+        background-color: #55ACEE;
+    }
+
+    .home-social h3 {
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    .home-social p {
+        margin: 5px 0;
+        font-size: 14px;
+    }
+
+@media (max-width: 768px) {
+    .col {
+        width: 100%;
+    }
+
+    .home-social .item {
+        border-bottom: 1px solid #D5D5D5;
+        padding: 15px 0 5px 50px;
+        position: relative;
+        font-size: 12px;
+    }
+
+    .home-social .favicon {
+        left: 10px;
+    }
+
+    .home-articles .col {
+        padding: 0;
+    }
+
+        .home-articles .col h3 {
+            font-size: 16px;
+            margin: -5px 0 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-transform: initial;
+            font-weight: 400;
+            width: calc(100% - 170px);
+            float: right;
+        }
+}

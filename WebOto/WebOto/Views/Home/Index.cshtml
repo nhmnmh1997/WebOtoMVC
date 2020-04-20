@@ -1,0 +1,210 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<section id="page-home">
+    <link type="text/css" rel="stylesheet" href="~/Content/themes/default/css/flexslider.css">
+    <script type="text/javascript" src="~/Content/themes/default/js/jquery.flexslider.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.flexslider').flexslider({ animation: 'slide' });
+            $(window).trigger('resize');
+        });
+    </script>
+    <div class="module-slider">
+        <div class="flexslider">
+            <ul class="slides">
+                <li><a href="#"><img src="~/Content/images/hondaoto.info/images/banners/honda_accord_2019.jpg" alt="Xe Honda accord" /></a></li>
+                <li><a href="#"><img src="~/Content/images/hondaoto.info/images/banners/jazz.jpg" alt="Xe Honda Jazz" /></a></li>
+                <li><a href="#"><img src="~/Content/images/hondaoto.info/images/banners/honda_civic_2019.jpg" alt="Xe Honda Civic" /></a></li>
+                <li><a href="#"><img src="~/Content/images/hondaoto.info/images/banners/hrv_moi.png" alt="Xe Honda hrv" /></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="clr"></div>
+    <div class="tool-bottom-banner">
+        <div class="container">
+            <div class="list-icon-tool">
+                <div class="item">
+                    <a class="item__inner" href="khuyen-mai.html">
+                        <span class="item__icon-img">
+                            <img class="img1" src="~/Content/statics/icon-tmv-home-page.png">
+                            <img class="img2" src="~/Content/statics/icon-tmv-home-page-on.png">
+                        </span>
+                        <span class="item__text">
+                            <span class="desktop">Chương trình</span> <span>khuyến mãi</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="item">
+                    <a class="item__inner" href="bang-gia.html">
+
+                        <span class="item__icon-img">
+                            <img class="img1" src="~/Content/statics/icon-tmv-home-page-02.png">
+                            <img class="img2" src="~/Content/statics/icon-tmv-home-page-on-02.png">
+                        </span>
+                        <span class="item__text">
+                            <span>Bảng giá</span> <span class="desktop">chi tiết</span>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a class="item__inner" href="du-toan-chi-phi.html">
+
+                        <span class="item__icon-img">
+                            <img class="img1" src="~/Content/statics/icon-tmv-home-page-03.png">
+                            <img class="img2" src="~/Content/statics/icon-tmv-home-page-on-03.png">
+                        </span>
+                        <span class="item__text">
+                            <span>Dự toán</span> <span class="desktop">chi phí</span>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a class="item__inner" href="javascript:void(0);" onclick="$('#panel').fadeIn();">
+
+                        <span class="item__icon-img">
+                            <img class="img1" src="~/Content/statics/icon-tmv-home-page-04.png">
+                            <img class="img2" src="~/Content/statics/icon-tmv-home-page-on-04.png">
+                        </span>
+                        <span class="item__text">
+                            <span class="desktop"> Đăng ký</span> <span>lái thử</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clr"></div>
+    <div class="cars">
+
+        <div class="container">
+            <h2 class="block-title">Các dòng xe</h2>
+            <div class="car">
+                <a href="xe-honda-jazz.html"><img class="right" src="~/Content/images/xe/thumb/1675_honda_jazz2.png" alt="Xe Honda Jazz"></a>
+                <a href="xe-honda-jazz.html"><h3>Xe Honda Jazz</h3></a>
+                <div class="price">Giá: 544,000,000₫<a class="fr" href="javascript:void(0);" onclick="$('#panel').fadeIn();">Lái thử</a> <a class="fr" href="du-toan-chi-phi.html">Dự toán</a></div>
+
+            </div>
+            <div class="car">
+                <a href="xe-honda-brio.html"><img class="right" src="~/Content/images/hondaoto.info/images/xe/thumb/brio.png" alt="Xe Honda Brio 2019"></a>
+                <a href="xe-honda-brio.html"><h3>Xe Honda Brio 2019</h3></a>
+                <div class="price">Giá: 418,000,000₫<a class="fr" href="javascript:void(0);" onclick="$('#panel').fadeIn();">Lái thử</a> <a class="fr" href="du-toan-chi-phi.html">Dự toán</a></div>
+
+            </div>
+            <div class="car">
+                <a href="xe-honda-city.html"><img class="right" src="~/Content/images/xe/thumb/city.png" alt="Xe Honda City"></a>
+                <a href="xe-honda-city.html"><h3>Xe Honda City</h3></a>
+                <div class="price">Giá: 529,000,000₫<a class="fr" href="javascript:void(0);" onclick="$('#panel').fadeIn();">Lái thử</a> <a class="fr" href="du-toan-chi-phi.html">Dự toán</a></div>
+
+            </div>
+            <div class="car">
+                <a href="xe-honda-civic.html"><img class="right" src="~/Content/images/hondaoto.info/images/xe-honda-oto/civic.png" alt="Xe Honda Civic 2019"></a>
+                <a href="xe-honda-civic.html"><h3>Xe Honda Civic 2019</h3></a>
+                <div class="price">Giá: 729,000,000₫<a class="fr" href="javascript:void(0);" onclick="$('#panel').fadeIn();">Lái thử</a> <a class="fr" href="du-toan-chi-phi.html">Dự toán</a></div>
+
+            </div>
+            <div class="car">
+                <a href="xe-honda-cr-v.html"><img class="right" src="~/Content/images/xe/thumb/1675_honda_crv.png" alt="Xe Honda CR-V"></a>
+                <a href="xe-honda-cr-v.html"><h3>Xe Honda CR-V</h3></a>
+                <div class="price">Giá: 983,000,000₫<a class="fr" href="javascript:void(0);" onclick="$('#panel').fadeIn();">Lái thử</a> <a class="fr" href="du-toan-chi-phi.html">Dự toán</a></div>
+
+            </div>
+            <div class="car">
+                <a href="xe-honda-accord.html"><img class="right" src="~/Content/images/hondaoto.info/images/xe-honda-oto/accord.png" alt="Xe Honda Accord 2019"></a>
+                <a href="xe-honda-accord.html"><h3>Xe Honda Accord 2019</h3></a>
+                <div class="price">Giá: 1,319,000,000₫<a class="fr" href="javascript:void(0);" onclick="$('#panel').fadeIn();">Lái thử</a> <a class="fr" href="du-toan-chi-phi.html">Dự toán</a></div>
+
+            </div>
+            <div class="car">
+                <a href="xe-honda-hr-v.html"><img class="right" src="~/Content/images/xe/thumb/hr_v.png" alt="Xe Honda HR-V"></a>
+                <a href="xe-honda-hr-v.html"><h3>Xe Honda HR-V</h3></a>
+                <div class="price">Giá: 786,000,000₫<a class="fr" href="javascript:void(0);" onclick="$('#panel').fadeIn();">Lái thử</a> <a class="fr" href="du-toan-chi-phi.html">Dự toán</a></div>
+
+            </div>
+        </div>
+    </div>
+    <div class="clr"></div>
+    <div class="container">
+        <h2 class="block-title">Tin tức</h2>
+        <div class="row articles">
+            <div class="col col-4 article">
+                <a href="honda-civic-rs-2020-phong-cach-the-thao-tao-su-buc-pha-va-khac-biet.html" style="background-image: url('~/Content/images/bai-viet/honda_civic_rs.jpg');">
+                    <img src="~/Content/images/bai-viet/honda_civic_rs.jpg" alt="Honda Civic RS 2020: Phong cách thể thao tạo sự bức phá và khác biệt!">
+                    <h3>Honda Civic RS 2020: Phong cách thể thao tạo sự bức phá và khác biệt!</h3>
+                </a>
+            </div>
+            <div class="col col-4 article">
+                <a href="honda-oto-sai-gon-quan-7-dang-dan-tro-thanh-dai-ly-5s-hang-dau-tai-ho-chi-minh.html" style="background-image: url('~/Content/images/bai-viet/hondasaigonquan7_4.jpg');">
+                    <img src="~/Content/images/bai-viet/hondasaigonquan7_4.jpg" alt="Honda Ôtô Sài Gòn Quận 7 đang dần trở thành đại lý 5S hàng đầu tại Hồ Chí Minh">
+                    <h3>Honda Ôtô Sài Gòn Quận 7 đang dần trở thành đại lý 5S hàng đầu tại Hồ Chí Minh</h3>
+                </a>
+            </div>
+            <div class="col col-4 article">
+                <a href="tin-tuc-toyota-camry-va-honda-accord-the-he-moi-deu-sap-ve-viet-nam-meo-nao-can-miu-nao.html" style="background-image: url('~/Content/images/xehay_toyota_camry_honda_accord_.jpg');">
+                    <img src="~/Content/images/xehay_toyota_camry_honda_accord_.jpg" alt="Toyota Camry và Honda Accord thế hệ mới đều sắp về Việt Nam: Mèo nào cắn mỉu nào ?">
+                    <h3>Toyota Camry và Honda Accord thế hệ mới đều sắp về Việt Nam: Mèo nào cắn mỉu nào ?</h3>
+                </a>
+            </div>
+            <div class="col col-4 article">
+                <a href="honda-br-v-2019-se-som-co-mat-tai-viet-nam.html" style="background-image: url('~/Content/images/bai-viet/tin-tuc/xehay_Honda_BRV_Thailand_290318_.jpg');">
+                    <img src="~/Content/images/bai-viet/tin-tuc/xehay_Honda_BRV_Thailand_290318_.jpg" alt="Honda BR-V 2019 sẽ sớm có mặt tại Việt Nam">
+                    <h3>Honda BR-V 2019 sẽ sớm có mặt tại Việt Nam</h3>
+                </a>
+            </div>
+            <div class="col col-4 article">
+                <a href="cam-nhan-honda-jazz-xe-nhap-nho-gon-cho-phu-nu-honda-quan-7.html" style="background-image: url('~/Content/images/bai-viet/tin-tuc/cam_nhan_honda_jazz_xe_nhap_nho_.jpg');">
+                    <img src="~/Content/images/bai-viet/tin-tuc/cam_nhan_honda_jazz_xe_nhap_nho_.jpg" alt="Cảm nhận Honda Jazz: Xe nhập nhỏ gọn cho phụ nữ - Honda Quận 7">
+                    <h3>Cảm nhận Honda Jazz: Xe nhập nhỏ gọn cho phụ nữ - Honda Quận 7</h3>
+                </a>
+            </div>
+            <div class="col col-4 article">
+                <a href="honda-viet-nam-cong-bo-ket-qua-kinh-doanh-thang-8-2018-honda-quan-7.html" style="background-image: url('~/Content/images/bai-viet/tin-tuc/Honda_Vi%c3%a1%c2%bb%c2%87t_Nam.html');">
+                    <img src="~/Content/images/bai-viet/tin-tuc/Honda_Vi%c3%a1%c2%bb%c2%87t_Nam.html" alt="Honda Việt Nam công bố Kết quả kinh doanh tháng 8/2018 - Honda Quận 7">
+                    <h3>Honda Việt Nam công bố Kết quả kinh doanh tháng 8/2018 - Honda Quận 7</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="home-social">
+        <div class="container">
+            <div class="row">
+
+                <div class="col col-3">
+                    <img alt="Mr Bá Học" src="hondasaigonquan7.jpg">
+                </div>
+                <div class="col col-3 feeds">
+                    <div class="item" style=" padding: 0; ">
+                        <h3><a href="index.html" style=" text-align: center; width: 100%; display: block; margin-bottom: 5px; ">Mr Bá Học<br>Hotline 0906.709.193<br>hocnb@hondaotoquan7.com.vn</a></h3>
+                    </div>
+                    <div class="item facebook">
+                        <a rel="nofollow" class="favicon" target="_blank" href="https://www.facebook.com/ShowroomHondaotoquan7/">Facebook</a>
+                        <h3><a rel="nofollow" href="https://www.facebook.com/ShowroomHondaotoquan7/" target="blank">Fanpage</a></h3>
+                        <p>Facebook của Honda Ôtô Sài Gòn - Quận 7 dành cho mọi người.</p>
+                    </div>
+                    <div class="item youtube">
+                        <a rel="nofollow" class="favicon" target="_blank" href="https://www.youtube.com/channel/UCqIykUanceG1_VwqGxjQE4Q">YouTube</a>
+                        <h3><a rel="nofollow" href="https://www.youtube.com/channel/UCqIykUanceG1_VwqGxjQE4Q" target="blank">Channel</a></h3>
+                        <p>Tìm hiểu Honda Ôtô Sài Gòn - Quận 7 qua các video.</p>
+                    </div>
+
+                    <div class="item twitter">
+                        <a rel="nofollow" class="favicon" target="_blank" href="http://twitter.com/">Twitter</a>
+                        <h3><a rel="nofollow" href="http://twitter.com/" target="blank">Twitter</a></h3>
+                        <p>Theo dõi Honda Ôtô Sài Gòn - Quận 7 trên Twitter.</p>
+                    </div>
+                </div>
+                <div class="col col-6">
+                    <div class="video-wrapper">
+                        <iframe width="100%" height="270" src="http://www.youtube.com/embed/5WkFfhQving" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clr"></div>
+</section>

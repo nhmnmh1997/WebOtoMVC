@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Honda Ôtô Cộng Hòa</title>
+    <meta name="description" content="Honda Ôtô Cộng Hòa là đại lý có quy mô lớn bậc nhất khu vực thành phố Hồ Chí Minh đạt tiêu chuẩn 5S từ Honda Ô tô Việt Nam. Chuyên phân phối sản phẩm ô tô Honda chính hãng tại Việt Nam">
+    <link rel="canonical" href="index.html">
+    <meta charset="UTF-8">
+    <meta content="INDEX,FOLLOW" name="robots" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="audience" content="General" />
+    <meta name="resource-type" content="Document" />
+    <meta name="distribution" content="Global" />
+    <meta name="RATING" content="GENERAL">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:url" content="@Url.Action("Index","Home")">
+    <meta property="og:title" content="Honda Ôtô Cộng Hòa | Đại lý 5S Honda Việt Nam">
+    <meta property="og:description" content="Honda Ôtô Cộng Hòa là đại lý có quy mô lớn bậc nhất khu vực thành phố Hồ Chí Minh đạt tiêu chuẩn 5S từ Honda Ô tô Việt Nam. Chuyên phân phối sản phẩm ô tô Honda chính hãng tại Việt Nam">
+    <meta name="GENERATOR" content="Lê Gia ICT">
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <script src="~/Content/js/webscript.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Arimo:400,700" rel="stylesheet">
+    <link href="~/Content/css/font-awesome.min.css" rel="stylesheet">
+    @*<script src="~/Scripts/jquery-3.3.1.min.js"></script>*@
+    @*@Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+
+
+    <link href="https://fonts.googleapis.com/css?family=Arimo:400,700" rel="stylesheet">
+    <link href="~/Content/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/Content/css/webstyle.css" rel="stylesheet" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-771346679"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-771346679');
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154882596-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-154882596-1');
+    </script>
+
+    <link href="~/Content/css/webstyle2.css" rel="stylesheet" />
+
+    <link href="~/Content/css/webstyle3.css" rel="stylesheet" />
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="left"><img id="logo" class="left" height="90" src="~/Content/images/home/logohonda.png" alt="Logo Honda Ôtô"></a>
+            <ul class="menu right">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+                <li>
+                    <a href="san-pham.html">Sản phẩm</a>
+                    <div class="sub">
+                        <div class="container">
+                            <ul>
+                                <li class="car">
+                                    <a href="xe-honda-jazz.html"><img class="right" src="~/Content/images/xe/thumb/1675_honda_jazz2.png" alt="Xe Honda Jazz"></a>
+                                    <a href="xe-honda-jazz.html">
+                                        <h3>Xe Honda Jazz</h3>
+                                    </a>
+                                    <div class="price">
+                                        <p>Giá: 544,000,000₫</p>
+                                        <a class="fl" href="javascript:void(0);" onclick="$('#panel').fadeIn();">Đăng ký lái thử</a>
+                                        <a class="fr" href="du-toan-chi-phi.html">Dự toán chi phí</a>
+                                    </div>
+                                </li>
+                                <li class="car">
+                                    <a href="xe-honda-brio.html"><img class="right" src="~/Content/images/hondaoto.info/images/xe/thumb/brio.png" alt="Xe Honda Brio 2019"></a>
+                                    <a href="xe-honda-brio.html">
+                                        <h3>Xe Honda Brio 2019</h3>
+                                    </a>
+                                    <div class="price">
+                                        <p>Giá: 418,000,000₫</p>
+                                        <a class="fl" href="javascript:void(0);" onclick="$('#panel').fadeIn();">Đăng ký lái thử</a>
+                                        <a class="fr" href="du-toan-chi-phi.html">Dự toán chi phí</a>
+                                    </div>
+                                </li>
+                                <li class="car">
+                                    <a href="xe-honda-city.html"><img class="right" src="~/Content/images/xe/thumb/city.png" alt="Xe Honda City"></a>
+                                    <a href="xe-honda-city.html">
+                                        <h3>Xe Honda City</h3>
+                                    </a>
+                                    <div class="price">
+                                        <p>Giá: 529,000,000₫</p>
+                                        <a class="fl" href="javascript:void(0);" onclick="$('#panel').fadeIn();">Đăng ký lái thử</a>
+                                        <a class="fr" href="du-toan-chi-phi.html">Dự toán chi phí</a>
+                                    </div>
+                                </li>
+                                <li class="car">
+                                    <a href="xe-honda-civic.html"><img class="right" src="~/Content/images//hondaoto.info/images/xe-honda-oto/civic.png" alt="Xe Honda Civic 2019"></a>
+                                    <a href="xe-honda-civic.html">
+                                        <h3>Xe Honda Civic 2019</h3>
+                                    </a>
+                                    <div class="price">
+                                        <p>Giá: 729,000,000₫</p>
+                                        <a class="fl" href="javascript:void(0);" onclick="$('#panel').fadeIn();">Đăng ký lái thử</a>
+                                        <a class="fr" href="du-toan-chi-phi.html">Dự toán chi phí</a>
+                                    </div>
+                                </li>
+                                <li class="car">
+                                    <a href="xe-honda-cr-v.html"><img class="right" src="~/Content/images/xe/thumb/1675_honda_crv.png" alt="Xe Honda CR-V"></a>
+                                    <a href="xe-honda-cr-v.html">
+                                        <h3>Xe Honda CR-V</h3>
+                                    </a>
+                                    <div class="price">
+                                        <p>Giá: 983,000,000₫</p>
+                                        <a class="fl" href="javascript:void(0);" onclick="$('#panel').fadeIn();">Đăng ký lái thử</a>
+                                        <a class="fr" href="du-toan-chi-phi.html">Dự toán chi phí</a>
+                                    </div>
+                                </li>
+                                <li class="car">
+                                    <a href="xe-honda-accord.html"><img class="right" src="~/Content/images/hondaoto.info/images/xe-honda-oto/accord.png" alt="Xe Honda Accord 2019"></a>
+                                    <a href="xe-honda-accord.html">
+                                        <h3>Xe Honda Accord 2019</h3>
+                                    </a>
+                                    <div class="price">
+                                        <p>Giá: 1,319,000,000₫</p>
+                                        <a class="fl" href="javascript:void(0);" onclick="$('#panel').fadeIn();">Đăng ký lái thử</a>
+                                        <a class="fr" href="du-toan-chi-phi.html">Dự toán chi phí</a>
+                                    </div>
+                                </li>
+                                <li class="car">
+                                    <a href="xe-honda-hr-v.html"><img class="right" src="~/Content/images/xe/thumb/hr_v.png" alt="Xe Honda HR-V"></a>
+                                    <a href="xe-honda-hr-v.html">
+                                        <h3>Xe Honda HR-V</h3>
+                                    </a>
+                                    <div class="price">
+                                        <p>Giá: 786,000,000₫</p>
+                                        <a class="fl" href="javascript:void(0);" onclick="$('#panel').fadeIn();">Đăng ký lái thử</a>
+                                        <a class="fr" href="du-toan-chi-phi.html">Dự toán chi phí</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="phu-kien.html">Phụ kiện</a></li>
+                <li><a href="bang-gia.html">Bảng giá</a></li>
+                <li><a href="khuyen-mai.html">Khuyến mãi</a></li>
+                <li><a href="tin-tuc.html">Tin tức</a></li>
+                <li><a href="lien-he.html">Liên hệ</a></li>
+                <li><a href="https://www.facebook.com/ShowroomHondaotoquan7" target="_blank"><img src="~/Content/statics/icon-1.png" alt="Social Facebook"></a></li>
+                <li><a href="https://www.youtube.com/channel/UCqIykUanceG1_VwqGxjQE4Q" target="_blank"><img src="~/Content/statics/icon-2.png" alt="Social Youtube"></a></li>
+            </ul>
+            <a class="button-menu mobile" href="javascript:void(0);" onclick="$('.menu').slideToggle();">☰</a>
+        </div>
+    </header>
+    <div class="clr"></div>
+
+    @RenderBody()
+
+    
+    <div class="clr"></div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col col-5 mcol-100">
+                    <h4>Honda Ôtô Cộng Hòa</h4>
+                    <ul>
+                        <li><a rel="nofollow" href="lien-he.html">Khu ven sông Nguyễn Văn Linh, P. Tân Hưng, Quận 7, HCM</a></li>
+                        <li><a rel="nofollow" href="mailto:hocnb@hondaotoquan7.com.vn">Email hocnb@hondaotoquan7.com.vn</a></li>
+                        <li><a rel="nofollow" href="tel:0901238018">Hotline PKD 0901.238.018</a></li>
+                    </ul>
+                </div>
+                <div class="col col-3 desktop">
+                    <h4>Các dòng xe ôtô Honda</h4>
+                    <div class="row">
+                        <div class="col col-6">
+                            <ul>
+                                <li><a rel="nofollow" href="xe-honda-jazz.html">Honda Jazz</a></li>
+                                <li><a rel="nofollow" href="xe-honda-city.html">Honda City</a></li>
+                                <li><a rel="nofollow" href="xe-honda-civic.html">Honda Civic</a></li>
+                            </ul>
+                        </div>
+                        <div class="col col-6">
+                            <ul>
+                                <li><a rel="nofollow" href="xe-honda-hr-v.html">Honda HR-V</a></li>
+                                <li><a rel="nofollow" href="xe-honda-cr-v.html">Honda CR-V</a></li>
+                                <li><a rel="nofollow" href="xe-honda-accord.html">Honda Accord</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-2 desktop">
+                    <h4>Mua xe</h4>
+                    <ul>
+                        <li><a rel="nofollow" href="bang-gia.html">Bảng giá</a></li>
+                        <li><a rel="nofollow" href="du-toan-chi-phi.html">Dự toán chi phí</a></li>
+                        <li><a rel="nofollow" href="javascript:void(0);" onclick="$('#panel').fadeIn();">Đăng ký lái thử</a></li>
+                    </ul>
+                </div>
+                <div class="col col-2 desktop">
+                    <h4>Thông tin</h4>
+                    <ul>
+                        <li><a rel="nofollow" href="gioi-thieu.html">Giới thiệu</a></li>
+                        <li><a rel="nofollow" href="dich-vu.html">Dịch vụ</a></li>
+                        <li><a rel="nofollow" href="tin-tuc.html">Tin tức</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright desktop"><a rel="nofollow" href="index.html">© @DateTime.Now.Year Honda Ôtô Cộng Hòa</a> <span class="right">Alright Service Honda Ôtô Cộng Hòa.</span></div>
+
+        </div>
+    </footer>
+    @*<script type="text/javascript">
+        $(window).load(function () {
+            setTimeout(function () {
+                $('#panel').fadeIn();
+            }, 3500);
+        });
+    </script>*@
+    <div class="modal-block" id="panel">
+        <div class="modal-dialog">
+            <form method="post" action="@Url.Action("Infoes","Home")">
+                <h3 class="dialog-title">Gửi yêu cầu</h3>
+                <div class="dialog-content">
+                    <input name="name" type="text" placeholder="Họ tên của bạn" required>
+                    <input name="phone" type="text" placeholder="SĐT của bạn" required>
+                    <input name="car" type="text" placeholder="Dòng xe quan tâm" required>
+                </div>
+                <p class="dialog-actions"><a href="javascript:void(0);" onclick="$('.modal-block').fadeOut();">Đóng</a><button type="submit" class="btnConfirm" name="task" value="request">Gửi</button></p>
+            </form>
+        </div>
+    </div>
+    <div class="widget-btn-list">
+        <a href="https://m.me/hondaotoconghoa.vn" rel="nofollow" class="facebook" target="_blank"></a>
+        <a href="https://zalo.me/0901238018" class="zalo" rel="nofollow" target="_blank"></a>
+        <a href="javascript:void(0);" onclick="$('#panel').fadeIn();" class="contact" rel="nofollow"></a>
+    </div>
+    <div class="echbay-alo-phone phonering-alo-phone phonering-alo-green style-for-position-bl">
+        <a onclick="return gtag_report_conversion('tel:0901238018');" href="tel:0901238018"><label>0901.238.018</label> </a>
+        <div class="phonering-alo-ph-circle-fill"></div>
+        <div class="phonering-alo-ph-img-circle"><a onclick="return gtag_report_conversion('tel:0901238018');" href="tel:0901238018" class="">.</a></div>
+    </div>
+
+    @*@Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)*@
+</body>
+</html>

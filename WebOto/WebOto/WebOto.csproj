@@ -1,0 +1,724 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4485B2CE-97FF-471D-82B1-99253407558B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebOto</RootNamespace>
+    <AssemblyName>WebOto</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44391</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\font-awesome.min.css" />
+    <Content Include="Content\css\webstyle.css" />
+    <Content Include="Content\css\webstyle2.css" />
+    <Content Include="Content\fonts\fontawesome-webfont3e6e.html" />
+    <Content Include="Content\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="Content\fonts\icomoon\icomoonf6b2.svg" />
+    <Content Include="Content\images\bai-viet\hondasaigonquan7_1.png" />
+    <Content Include="Content\images\bai-viet\hondasaigonquan7_2.jpg" />
+    <Content Include="Content\images\bai-viet\hondasaigonquan7_4.jpg" />
+    <Content Include="Content\images\bai-viet\honda_civic_rs.jpg" />
+    <Content Include="Content\images\bai-viet\honda_civic_rs_1.jpg" />
+    <Content Include="Content\images\bai-viet\honda_civic_rs_2.jpg" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Báº£n_xe_Äiá»n_nhÃ¡i_tá»«_china_Hond.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\cam_nhan_honda_jazz_xe_nhap_nho_.jpg" />
+    <Content Include="Content\images\bai-viet\tin-tuc\chi_tiáº¿t_Äá»_á»_ngoáº¡i_tháº¥t_honda.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Cáº£n_trÆ°á»c_cá»§a_Kia_Sportage_Facel.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\CÃ¡c_gioÄng_cao_su_honda_quáº­n_7.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\DOANH_Sá»_BÃN_XE_MÃY_HONDA.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\DOANH_Sá»_BÃN_ÃTÃ_HONDA.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\DÃ²ng_xe_giÃ¡_ráº»_ná»i_Äá»a_Perodua_A.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Evoque_mini_EV_nhÃ¡i_honda_quáº­n.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Evoque_mini_EV_xe_Äiá»n_nhÃ¡i_ho.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Gáº§m_xe_honda_quáº­n_7.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Honda_City_Honda_Quáº­n_7.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Honda_CR_V_Honda_Quáº­n_7.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\honda_jazz_zing_2018_honda_o_to_.jpg" />
+    <Content Include="Content\images\bai-viet\tin-tuc\honda_jazz_zing_2018_honda_quan_ - Copy 1.jpg" />
+    <Content Include="Content\images\bai-viet\tin-tuc\honda_jazz_zing_2018_honda_quan_.jpg" />
+    <Content Include="Content\images\bai-viet\tin-tuc\honda_jazz_zing_2018_o_to_honda_.jpg" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Honda_Viá»t_Nam.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Honda_ÃtÃ´_Quáº­n_7_BÃ¡_Há»c.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Honda_ÃtÃ´_Quáº­n_7_PhÃº_Má»¹_HÆ°ng.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Honda_ÃtÃ´_SÃ i_GÃ²n.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Há»_thá»ng_phanh_honda_quáº­n_7.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Khung_Kia_Sportage_Facelift_2019.jpg" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Kia_Sportage_Facelift_2019_Hon - Copy 1.jpg" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Kia_Sportage_Facelift_2019_Hon.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Kia_Sportage_Facelift_2019_hon.jpg" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Kia_Sportage_Facelift_2019_honda.jpg" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Kia_Sportage_Facelift_2019_Tin.jpg" />
+    <Content Include="Content\images\bai-viet\tin-tuc\kiá»m_tra_trÃªn_Ã´tÃ´_trong_mÃ¹a_mÆ°a_.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Mercedes_GLE_báº£n_nhÃ¡i_honda_qu.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Mercedes_GLE_china_honda_quáº­n_.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Mercedes_GLE_nhÃ¡i_honda_quáº­n_7.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\máº«u_xe_Rover_Evoque_nhÃ¡i_honda.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Ná»i_tháº¥t_cÃ³_má»t_sá»_thay_Äá»i_Ho.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Recaro_race_Honda_Quáº­n_7_PhÃº_M.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Rover_Evoque_china_honda_quáº­n_.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Sportage_Facelift_2019.jpg" />
+    <Content Include="Content\images\bai-viet\tin-tuc\xehay_Honda_BRV_Thailand_290318_.jpg" />
+    <Content Include="Content\images\bai-viet\tin-tuc\xe_nhÃ¡i_Rover_Evoque_honda_quáº­.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Xe_Äiá»n_nhÃ¡i_Honda_quáº­n_7.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\XÃ³a_bá»_thuáº¿_GTGT_Honda_Quáº­n_7.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Äáº§u_Kia_Sportage_Facelift_2019_.html" />
+    <Content Include="Content\images\bai-viet\tin-tuc\ÄÃ¨n_Kia_Sportage_Facelift_2019_.html" />
+    <Content Include="Content\images\call.png" />
+    <Content Include="Content\images\home\logohonda.png" />
+    <Content Include="Content\images\hondaoto.info\images\banners\honda_accord_2019.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\banners\honda_civic_2019.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\banners\hrv_moi.png" />
+    <Content Include="Content\images\hondaoto.info\images\banners\jazz.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\honda-accord-10th-gen-demo\18.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\honda-accord-10th-gen-demo\19.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\honda-accord-10th-gen\01.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\honda-accord-10th-gen\02.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\honda-accord-10th-gen\03.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\honda-accord-10th-gen\04.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\honda-accord-10th-gen\05.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\honda-accord-10th-gen\06.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\honda-accord-10th-gen\07.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\honda-accord-10th-gen\08.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\honda-accord-10th-gen\09.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\honda-accord-10th-gen\10.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\honda-accord-10th-gen\11.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\honda-accord-10th-gen\12.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\honda-accord-10th-gen\13.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\honda-accord-10th-gen\14.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\honda-accord-10th-gen\15.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\honda-accord-10th-gen\16.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\honda-accord-10th-gen\17.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe-honda-oto\accord.png" />
+    <Content Include="Content\images\hondaoto.info\images\xe-honda-oto\civic.png" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-brio\brio1.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-brio\brio10.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-brio\brio11.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-brio\brio12.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-brio\brio2.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-brio\brio3.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-brio\brio4.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-brio\brio5.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-brio\brio6.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-brio\brio7.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-brio\brio8.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-brio\brio9.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-city-2017\furniture-item2-big-2-1.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-civic-2019\01.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-civic-2019\02.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-civic-2019\03.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-civic-2019\04.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-civic-2019\05.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-civic-2019\06.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-civic-2019\07.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-civic-2019\08.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-civic-2019\09.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-civic-2019\10.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-civic-2019\11.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-civic-2019\12.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\1.png" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\10.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\11.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\12.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\13.png" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\14.png" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\15.png" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\16.png" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\17.png" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\18.png" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\19.png" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\2.png" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\20.png" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\21.png" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\22.png" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\23.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\24.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\25.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\26.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\27.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\28.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\29.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\3.png" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\30.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\31.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\32.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\33.png" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\34.png" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\35.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\36.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\37.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\38.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\39.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\4.png" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\40.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\41.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\42.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\43.png" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\44.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\45.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\46.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\47.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\48.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\49.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\5.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\50.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\51.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\52.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\6.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\7.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\8.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\9.jpg" />
+    <Content Include="Content\images\hondaoto.info\images\xe\thumb\brio.png" />
+    <Content Include="Content\images\xehay_honda_accord_2019_301118_1.jpg" />
+    <Content Include="Content\images\xehay_Honda_Accord_2019_Thailand.jpg" />
+    <Content Include="Content\images\xehay_honda_accord_21032019_2.jpg" />
+    <Content Include="Content\images\xehay_honda_accord_21032019_3.jpg" />
+    <Content Include="Content\images\xehay_Honda_BRV_Thailand_290318_ - Copy 1.jpg" />
+    <Content Include="Content\images\xehay_Honda_BRV_Thailand_290318_ - Copy 2.jpg" />
+    <Content Include="Content\images\xehay_Honda_BRV_Thailand_290318_ - Copy 3.jpg" />
+    <Content Include="Content\images\xehay_Honda_BRV_Thailand_290318_ - Copy 4.jpg" />
+    <Content Include="Content\images\xehay_Honda_BRV_Thailand_290318_ - Copy 5.jpg" />
+    <Content Include="Content\images\xehay_toyota_camry_15012019_12.jpg" />
+    <Content Include="Content\images\xehay_toyota_camry_15012019_14.jpg" />
+    <Content Include="Content\images\xehay_toyota_camry_15012019_3.jpg" />
+    <Content Include="Content\images\xehay_toyota_camry_15012019_5.jpg" />
+    <Content Include="Content\images\xehay_toyota_camry_15012019_6.jpg" />
+    <Content Include="Content\images\xehay_toyota_camry_honda_accord_.jpg" />
+    <Content Include="Content\images\xe\big\brio.jpg" />
+    <Content Include="Content\images\xe\big\city.jpg" />
+    <Content Include="Content\images\xe\big\crv.jpg" />
+    <Content Include="Content\images\xe\big\hrv.jpg" />
+    <Content Include="Content\images\xe\big\jazz.jpg" />
+    <Content Include="Content\images\xe\honda-city-2017\1_Honda_Colors_White.png" />
+    <Content Include="Content\images\xe\honda-city-2017\2_Honda_Colors_Grey.png" />
+    <Content Include="Content\images\xe\honda-city-2017\3_Honda_Colors_Brown.png" />
+    <Content Include="Content\images\xe\honda-city-2017\4_Honda_Colors_Blue.png" />
+    <Content Include="Content\images\xe\honda-city-2017\5_Honda_Colors_Red.png" />
+    <Content Include="Content\images\xe\honda-city-2017\6_Honda_Colors_Black.png" />
+    <Content Include="Content\images\xe\honda-city-2017\An_toÃ n_Vá»¯ng_táº§m.html" />
+    <Content Include="Content\images\xe\honda-city-2017\ay_náº¯m_cá»­a_máº¡_crÃ´m.html" />
+    <Content Include="Content\images\xe\honda-city-2017\Cháº¿_Äá»_há»_trá»£_khá»i_hÃ nh_ngang_dá».html" />
+    <Content Include="Content\images\xe\honda-city-2017\Cháº¿_Äá»_khá»i_Äá»ng_báº±ng_nÃºt_báº¥m.html" />
+    <Content Include="Content\images\xe\honda-city-2017\Cháº¿_Äá»_kiá»m_soÃ¡t_hÃ nh_trÃ¬nh.html" />
+    <Content Include="Content\images\xe\honda-city-2017\Cáº£m_biáº¿n_lÃ¹i.html" />
+    <Content Include="Content\images\xe\honda-city-2017\Cá»p_xe_rá»ng_rÃ£i.html" />
+    <Content Include="Content\images\xe\honda-city-2017\Cá»¥m_ÄÃ¨n_trÆ°á»c_LED.html" />
+    <Content Include="Content\images\xe\honda-city-2017\Cá»­a_giÃ³_Äiá»u_hoÃ .html" />
+    <Content Include="Content\images\xe\honda-city-2017\ECON_mode.jpg" />
+    <Content Include="Content\images\xe\honda-city-2017\ECO_Coaching.jpg" />
+    <Content Include="Content\images\xe\honda-city-2017\Há»_thá»ng_Audio.html" />
+    <Content Include="Content\images\xe\honda-city-2017\Há»_thá»ng_chá»ng_bÃ³_cá»©ng_phanh_AB.html" />
+    <Content Include="Content\images\xe\honda-city-2017\Há»_thá»ng_cÃ¢n_báº±ng_Äiá»n_tá»­_VSA_.html" />
+    <Content Include="Content\images\xe\honda-city-2017\Há»_thá»ng_Ã¢m_thanh_8_loa.html" />
+    <Content Include="Content\images\xe\honda-city-2017\Há»_thá»ng_Äiá»u_hoÃ _tá»±_Äá»ng.html" />
+    <Content Include="Content\images\xe\honda-city-2017\Há»c_chá»©a_Äá»_cá»§a_xe_thuáº­n_tiá»n.html" />
+    <Content Include="Content\images\xe\honda-city-2017\Há»c_Äá»±ng_cá»c_tiá»n_dá»¥ng.html" />
+    <Content Include="Content\images\xe\honda-city-2017\Há»c_Äá»±ng_Äá»_gháº¿.html" />
+    <Content Include="Content\images\xe\honda-city-2017\Há»c_Äá»±ng_Äá»_tá»±a_tay_gháº¿_lÃ¡i_thiáº¿ - Copy 1.html" />
+    <Content Include="Content\images\xe\honda-city-2017\Há»p_sá»_tá»±_Äá»ng_vÃ´_cáº¥p_CVT_.html" />
+    <Content Include="Content\images\xe\honda-city-2017\HÃ ng_gháº¿_sau_Ãªm_Ã¡i.html" />
+    <Content Include="Content\images\xe\honda-city-2017\ISOFix_MÃ³c_gháº¿_an_toÃ n.html" />
+    <Content Include="Content\images\xe\honda-city-2017\Khung_háº¥p_thu_lá»±c_an_toÃ n_G_CON.html" />
+    <Content Include="Content\images\xe\honda-city-2017\KÃ­nh_cháº¯n_náº¯ng.html" />
+    <Content Include="Content\images\xe\honda-city-2017\La_ZÄng_thiáº¿t_káº¿.html" />
+    <Content Include="Content\images\xe\honda-city-2017\Láº«y_chuyá»n_sá»_tay_thÃ´ng_minh.html" />
+    <Content Include="Content\images\xe\honda-city-2017\Ngoáº¡i_tháº¥t_phong_cÃ¡ch_thá»_thao.html" />
+    <Content Include="Content\images\xe\honda-city-2017\NgÄn_Äá»±ng_vÃ­_gháº¿_lÃ¡i_tiá»n_lá»£i.html" />
+    <Content Include="Content\images\xe\honda-city-2017\Ná»i_tháº¥t_Äáº¦Y_Cáº¢M_Há»¨NG.html" />
+    <Content Include="Content\images\xe\honda-city-2017\Tay_lÃ¡i_trá»£_lá»±c_Äiá»n.html" />
+    <Content Include="Content\images\xe\honda-city-2017\Tay_lÃ¡i_trá»£_lá»±c_Äiá»n_mang_Äáº¿n_ph.html" />
+    <Content Include="Content\images\xe\honda-city-2017\Thiáº¿t_káº¿_Äáº§u_xe_áº¥n_tÆ°á»£ng.html" />
+    <Content Include="Content\images\xe\honda-city-2017\Trang_bá»_há»_thá»ng_ÄÃ¨n_sÆ°Æ¡ng_mÃ¹_L.html" />
+    <Content Include="Content\images\xe\honda-city-2017\Váº­n_hÃ nh_Máº NH_Máº¼.html" />
+    <Content Include="Content\images\xe\honda-city-2017\VÃ´_lÄng_tÃ­ch_há»£p.html" />
+    <Content Include="Content\images\xe\honda-city-2017\Äng_ten_vÃ¢y_cÃ¡_máº­p.html" />
+    <Content Include="Content\images\xe\honda-city-2017\Äá»ng_cÆ¡_1.5l i-vtec sohc.html" />
+    <Content Include="Content\images\xe\honda-city-2017\ÄÃ¨n_phanh_treo_cao_tÄng.html" />
+    <Content Include="Content\images\xe\honda-cvr\black_honda_CRV_quáº­n_7.html" />
+    <Content Include="Content\images\xe\honda-cvr\Camera_lÃ¹i_3_gÃ³c_honda_CRV_quáº­n_.html" />
+    <Content Include="Content\images\xe\honda-cvr\Cháº¿_Äá»_cáº£nh_bÃ¡o_chá»ng_buá»n_ngá»§_.html" />
+    <Content Include="Content\images\xe\honda-cvr\Cháº¿_Äá»_cáº£nh_bÃ¡o_honda_CRV_quáº­n.html" />
+    <Content Include="Content\images\xe\honda-cvr\Cháº¿_Äá»_ga_honda_CRV_quáº­n_7.html" />
+    <Content Include="Content\images\xe\honda-cvr\Cháº¿_Äá»_giá»¯_phanh_táº¡m_thá»i_hond.html" />
+    <Content Include="Content\images\xe\honda-cvr\Cháº¿_Äá»_khá»i_hÃ nh_honda_CRV_quáº­.html" />
+    <Content Include="Content\images\xe\honda-cvr\Cháº¿_Äá»_khá»i_hÃ nh_ngang_dá»c_HSA_h.html" />
+    <Content Include="Content\images\xe\honda-cvr\Cháº¿_Äá»_lÃ¡i_tiáº¿t_kiá»m_honda_CRV.html" />
+    <Content Include="Content\images\xe\honda-cvr\chá»©a_Äá»_tiá»n_dá»¥ng_honda_Crv_qu.html" />
+    <Content Include="Content\images\xe\honda-cvr\Chá»©c_nÄng_hÆ°á»ng_dáº«n_honda_CRV_.html" />
+    <Content Include="Content\images\xe\honda-cvr\Chá»©c_nÄng_khoÃ¡_cá»­a_tá»±_Äá»ng_honda.html" />
+    <Content Include="Content\images\xe\honda-cvr\Cáº£m_biáº¿n_gáº¡t_mÆ°a_honda_CRV_quáº­n_.html" />
+    <Content Include="Content\images\xe\honda-cvr\Cáº£m_biáº¿n_lÃ¹i_cáº£nh_bÃ¡o_báº±ng_Ã¢m_th.html" />
+    <Content Include="Content\images\xe\honda-cvr\Cáº£n_trÆ°á»c_ná»i_báº­t_honda_quáº­n_7.html" />
+    <Content Include="Content\images\xe\honda-cvr\Cá»ng_káº¿t_ná»i_HDMI_USB_á»_sáº¡c_Äi.html" />
+    <Content Include="Content\images\xe\honda-cvr\Cá»¥m_ÄÃ¨n_háº­u_LED_honda_quáº­n_7.html" />
+    <Content Include="Content\images\xe\honda-cvr\Cá»¥m_ÄÃ¨n_trÆ°á»c_Full_LED_honda_q.html" />
+    <Content Include="Content\images\xe\honda-cvr\Cá»­a_giÃ³_Äiá»u_hoÃ _honda_CRV_quáº­.html" />
+    <Content Include="Content\images\xe\honda-cvr\Cá»­a_giÃ³_Äiá»u_hÃ²a_3_honda_CRV_q.html" />
+    <Content Include="Content\images\xe\honda-cvr\CÃ¡c_thanh_náº¹p_máº¡_crÃ´m_trÃªn_cáº£n_t.html" />
+    <Content Include="Content\images\xe\honda-cvr\dá»_dÃ ng_quan_sÃ¡t_honda_quáº­n_7.html" />
+    <Content Include="Content\images\xe\honda-cvr\green_honda_CRV_quáº­n_7.html" />
+    <Content Include="Content\images\xe\honda-cvr\grey_honda_CRV_quáº­n_7.html" />
+    <Content Include="Content\images\xe\honda-cvr\GÆ°Æ¡ng_chiáº¿u_háº­u_gáº­p_Äiá»n_honda.html" />
+    <Content Include="Content\images\xe\honda-cvr\HONDA_CR_V_AN_TOÃN_Tá»I_ÄA_hond.html" />
+    <Content Include="Content\images\xe\honda-cvr\Há»_thá»ng_cÃ¢n_báº±ng_honda_CRV_qu.html" />
+    <Content Include="Content\images\xe\honda-cvr\Há»_thá»ng_há»_trá»£_Äá»ng_bá»_honda_.html" />
+    <Content Include="Content\images\xe\honda-cvr\Há»_thá»ng_há»_trá»£_ÄÃ¡nh_lÃ¡i_honda_C.html" />
+    <Content Include="Content\images\xe\honda-cvr\Há»_thá»ng_khung_gáº§m_honda_CRV_q.html" />
+    <Content Include="Content\images\xe\honda-cvr\Há»_thá»ng_Äiá»u_hÃ²a_tá»±_Äá»ng_honda_.html" />
+    <Content Include="Content\images\xe\honda-cvr\Há»c_Äá»±ng_kÃ­nh_rÃ¢m_thuáº­n_tiá»n_h.html" />
+    <Content Include="Content\images\xe\honda-cvr\Há»p_sá»_vÃ´_cáº¥p_tiÃªn_tiáº¿n_honda_.html" />
+    <Content Include="Content\images\xe\honda-cvr\Khi_Äá»ng_bá»_vá»i_Smartphone_honda.html" />
+    <Content Include="Content\images\xe\honda-cvr\Khung_xe_sá»­_dá»¥ng_thÃ©p_honda_CRV_.html" />
+    <Content Include="Content\images\xe\honda-cvr\KhÃ´ng_gian_bá»_trung_tÃ¢m_honda_.html" />
+    <Content Include="Content\images\xe\honda-cvr\La_zÄng_thiáº¿t_káº¿_phÃ¡_cÃ¡ch_hond.html" />
+    <Content Include="Content\images\xe\honda-cvr\Láº«y_chuyá»n_sá»_honda_CRV_quáº­n_7.html" />
+    <Content Include="Content\images\xe\honda-cvr\MÃ n_hÃ¬nh_cáº£m_á»©ng_7_inch_honda_CR.html" />
+    <Content Include="Content\images\xe\honda-cvr\Ná»I_THáº¤T_CR_V_Rá»NG_RÃI_honda_C.html" />
+    <Content Include="Content\images\xe\honda-cvr\Phanh_tay_Äiá»n_tá»­_honda_CRV_qu.html" />
+    <Content Include="Content\images\xe\honda-cvr\red_honda_CRV_quáº­n_7.html" />
+    <Content Include="Content\images\xe\honda-cvr\Tay_náº¯m_cá»­a_phÃ­a_trÆ°á»c_honda_qu.html" />
+    <Content Include="Content\images\xe\honda-cvr\thiáº¿t_káº¿_thÃ´ng_minh_honda_CRV_.html" />
+    <Content Include="Content\images\xe\honda-cvr\thong-so-ky-thuat\1.jpg" />
+    <Content Include="Content\images\xe\honda-cvr\thong-so-ky-thuat\2.jpg" />
+    <Content Include="Content\images\xe\honda-cvr\thong-so-ky-thuat\3.jpg" />
+    <Content Include="Content\images\xe\honda-cvr\thong-so-ky-thuat\4.jpg" />
+    <Content Include="Content\images\xe\honda-cvr\thong-so-ky-thuat\5.jpg" />
+    <Content Include="Content\images\xe\honda-cvr\thong-so-ky-thuat\6.jpg" />
+    <Content Include="Content\images\xe\honda-cvr\thong-so-ky-thuat\7.jpg" />
+    <Content Include="Content\images\xe\honda-cvr\thong-so-ky-thuat\8.jpg" />
+    <Content Include="Content\images\xe\honda-cvr\Truy_cáº­p_Website_honda_CRV_quáº­n_.html" />
+    <Content Include="Content\images\xe\honda-cvr\Trá»£_lá»±c_lÃ¡i_Äiá»n_honda_CRV_quáº­.html" />
+    <Content Include="Content\images\xe\honda-cvr\tÃ¬nh_huá»ng_lÃ¹i_honda_CRV_quáº­n_7.html" />
+    <Content Include="Content\images\xe\honda-cvr\VÃ´_lÄng_tÃ­ch_há»£p_honda_CRV_quáº­n_.html" />
+    <Content Include="Content\images\xe\honda-cvr\white_honda_CRV_quáº­n_7.html" />
+    <Content Include="Content\images\xe\honda-cvr\á»ng_xáº£_kÃ©p_tÄng_cháº¥t_thá»_thao_.html" />
+    <Content Include="Content\images\xe\honda-cvr\á»¨ng_dá»¥ng_báº£n_Äá»_vÃ _dáº«n_ÄÆ°á»ng_hon.html" />
+    <Content Include="Content\images\xe\honda-cvr\Äng_ten_vÃ¢y_cÃ¡_máº­p_honda_CRV_q.html" />
+    <Content Include="Content\images\xe\honda-cvr\ÄÃ¨n_bÃ¡o_phanh_honda_CRV_quáº­n_7.html" />
+    <Content Include="Content\images\xe\honda-cvr\ÄÃ¨n_Äá»c_báº£n_Äá»_tiá»n_Ã­ch_honda_.html" />
+    <Content Include="Content\images\xe\honda-jazz\Camera_lÃ¹i_3_gÃ³c_quay_honda_ja.html" />
+    <Content Include="Content\images\xe\honda-jazz\Cháº¿_Äá»_Cruise_Control_honda_ja.html" />
+    <Content Include="Content\images\xe\honda-jazz\Cháº¿_Äá»_há»_trá»£_khá»i_hÃ nh_ngang_dá».html" />
+    <Content Include="Content\images\xe\honda-jazz\ChÃ¬a_khoÃ¡_thÃ´ng_minh_honda_jaz.html" />
+    <Content Include="Content\images\xe\honda-jazz\color_rs_black_honda_quan7.png" />
+    <Content Include="Content\images\xe\honda-jazz\color_rs_grey_honda_quan7.png" />
+    <Content Include="Content\images\xe\honda-jazz\color_rs_orange_honda_quan7.png" />
+    <Content Include="Content\images\xe\honda-jazz\color_rs_red_honda_quan7.png" />
+    <Content Include="Content\images\xe\honda-jazz\color_rs_silver_honda_quan7.png" />
+    <Content Include="Content\images\xe\honda-jazz\color_rs_white_honda_quan7.png" />
+    <Content Include="Content\images\xe\honda-jazz\Cá»¥m_Äá»ng_há»_phong_cÃ¡ch_honda_q.html" />
+    <Content Include="Content\images\xe\honda-jazz\Cá»¥m_ÄÃ¨n_Full_LED_Honda_Jazz_2018.html" />
+    <Content Include="Content\images\xe\honda-jazz\CÃ¡nh_lÆ°á»t_giÃ³_Honda_Jazz_2018.html" />
+    <Content Include="Content\images\xe\honda-jazz\dau_xe_honda_jazz_2018.jpg" />
+    <Content Include="Content\images\xe\honda-jazz\ECO_Coaching_Honda_Jazz_2018_q.jpg" />
+    <Content Include="Content\images\xe\honda-jazz\GÆ°Æ¡ng_chiáº¿u_háº­u_honda_jazz_2018.html" />
+    <Content Include="Content\images\xe\honda-jazz\Honda_Jazz_2018.jpg" />
+    <Content Include="Content\images\xe\honda-jazz\honda_jazz_2018_má»i_náº»o_ÄÆ°á»ng.html" />
+    <Content Include="Content\images\xe\honda-jazz\Há»_thá»ng_audio_honda_quáº­n_7.html" />
+    <Content Include="Content\images\xe\honda-jazz\Há»_thá»ng_chá»ng_bÃ³_cá»©ng_phanh_AB.html" />
+    <Content Include="Content\images\xe\honda-jazz\Há»_thá»ng_cÃ¢n_báº±ng_Äiá»n_tá»­_VSA_.html" />
+    <Content Include="Content\images\xe\honda-jazz\Há»c_ÄÃ¨n_sÆ°Æ¡ng_mÃ¹_honda_jazz_2018.html" />
+    <Content Include="Content\images\xe\honda-jazz\Há»c_chá»©a_Äá»_honda_jazz_2018_qu.html" />
+    <Content Include="Content\images\xe\honda-jazz\Há»c_Äá»±ng_Äá»_trung_tÃ¢m_honda_ja.html" />
+    <Content Include="Content\images\xe\honda-jazz\Há»p_sá»_vÃ´_cáº¥p_CVT_Honda_Jazz.html" />
+    <Content Include="Content\images\xe\honda-jazz\Khung_háº¥p_thá»¥_lá»±c_an_toÃ n_G_CON_.html" />
+    <Content Include="Content\images\xe\honda-jazz\La_zÄng_honda_jazz_2018.html" />
+    <Content Include="Content\images\xe\honda-jazz\Láº«y_sá»_tay_tÃ­ch_há»£p_trÃªn_vÃ´_lÄng.html" />
+    <Content Include="Content\images\xe\honda-jazz\NgÄn_Äá»±ng_ly_honda_jazz_2018_q.html" />
+    <Content Include="Content\images\xe\honda-jazz\Ná»I_THáº¤T_BIáº¾N_HOÃ_HONDA_JAZZ_2.html" />
+    <Content Include="Content\images\xe\honda-jazz\Ná»I_THáº¤T_THÃ_Vá»_HONDA_JAZZ_201.html" />
+    <Content Include="Content\images\xe\honda-jazz\Tay_lÃ¡i_trá»£_lá»±c_Äiá»n_honda_jaz.html" />
+    <Content Include="Content\images\xe\honda-jazz\VÃ´_lÄng_tÃ­ch_há»£p_honda_quáº­n_7.html" />
+    <Content Include="Content\images\xe\honda-jazz\Xáº¿p_háº¡ng_5_sao_cao_nháº¥t_honda_.html" />
+    <Content Include="Content\images\xe\honda-jazz\Äiá»u_hÃ²a_tá»±_Äá»ng_honda_quáº­n_7.html" />
+    <Content Include="Content\images\xe\honda-jazz\Äá»ng_cÆ¡_1.5l i-vtec sohc - honda jazz 2018 quáº­n 7.html" />
+    <Content Include="Content\images\xe\thumb\1675_honda_crv.png" />
+    <Content Include="Content\images\xe\thumb\1675_honda_jazz2.png" />
+    <Content Include="Content\images\xe\thumb\city.png" />
+    <Content Include="Content\images\xe\thumb\hr_v.png" />
+    <Content Include="Content\js\webscript.js" />
+    <Content Include="Content\legia.app\images\call.png" />
+    <Content Include="Content\statics\icon-1.png" />
+    <Content Include="Content\statics\icon-2.png" />
+    <Content Include="Content\statics\icon-tmv-home-page-02.png" />
+    <Content Include="Content\statics\icon-tmv-home-page-03.png" />
+    <Content Include="Content\statics\icon-tmv-home-page-04.png" />
+    <Content Include="Content\statics\icon-tmv-home-page-on-02.png" />
+    <Content Include="Content\statics\icon-tmv-home-page-on-03.png" />
+    <Content Include="Content\statics\icon-tmv-home-page-on-04.png" />
+    <Content Include="Content\statics\icon-tmv-home-page-on.png" />
+    <Content Include="Content\statics\icon-tmv-home-page.png" />
+    <Content Include="Content\statics\social.png" />
+    <Content Include="Content\statics\sprite-genk_v9.png" />
+    <Content Include="Content\themes\default\css\flexslider.css" />
+    <Content Include="Content\themes\default\fonts\flexslider-icon.svg" />
+    <Content Include="Content\themes\default\js\jquery.flexslider.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="Content\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Content\fonts\icomoon\icomoonf6b2.eot" />
+    <Content Include="Content\fonts\icomoon\icomoonf6b2.ttf" />
+    <Content Include="Content\fonts\icomoon\icomoonf6b2.woff" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Báº£n_xe_Äiá»n_nhÃ¡i_tá»«_china_Hond.jpg.z" />
+    <Content Include="Content\images\bai-viet\tin-tuc\chi_tiáº¿t_Äá»_á»_ngoáº¡i_tháº¥t_honda.jpg.z" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Cáº£n_trÆ°á»c_cá»§a_Kia_Sportage_Facel.jpg.z" />
+    <Content Include="Content\images\bai-viet\tin-tuc\CÃ¡c_gioÄng_cao_su_honda_quáº­n_7.jpg.z" />
+    <Content Include="Content\images\bai-viet\tin-tuc\DOANH_Sá»_BÃN_XE_MÃY_HONDA.jpg.z" />
+    <Content Include="Content\images\bai-viet\tin-tuc\DOANH_Sá»_BÃN_ÃTÃ_HONDA.jpg.z" />
+    <Content Include="Content\images\bai-viet\tin-tuc\DÃ²ng_xe_giÃ¡_ráº»_ná»i_Äá»a_Perodua_A.jpg.z" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Evoque_mini_EV_nhÃ¡i_honda_quáº­n.jpg.z" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Evoque_mini_EV_xe_Äiá»n_nhÃ¡i_ho.jpg.z" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Gáº§m_xe_honda_quáº­n_7.jpg.z" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Honda_City_Honda_Quáº­n_7.jpg.z" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Honda_CR_V_Honda_Quáº­n_7.jpg.z" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Honda_Viá»t_Nam.jpg.z" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Honda_ÃtÃ´_Quáº­n_7_BÃ¡_Há»c.jpg.z" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Honda_ÃtÃ´_Quáº­n_7_PhÃº_Má»¹_HÆ°ng.jpg.z" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Honda_ÃtÃ´_SÃ i_GÃ²n.jpg.z" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Há»_thá»ng_phanh_honda_quáº­n_7.jpg.z" />
+    <Content Include="Content\images\bai-viet\tin-tuc\kiá»m_tra_trÃªn_Ã´tÃ´_trong_mÃ¹a_mÆ°a_.jpg.z" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Mercedes_GLE_báº£n_nhÃ¡i_honda_qu.jpg.z" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Mercedes_GLE_china_honda_quáº­n_.jpg.z" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Mercedes_GLE_nhÃ¡i_honda_quáº­n_7.jpg.z" />
+    <Content Include="Content\images\bai-viet\tin-tuc\máº«u_xe_Rover_Evoque_nhÃ¡i_honda.jpg.z" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Ná»i_tháº¥t_cÃ³_má»t_sá»_thay_Äá»i_Ho.jpg.z" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Recaro_race_Honda_Quáº­n_7_PhÃº_M.jpg.z" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Rover_Evoque_china_honda_quáº­n_.jpg.z" />
+    <Content Include="Content\images\bai-viet\tin-tuc\xe_nhÃ¡i_Rover_Evoque_honda_quáº­.16f.delayed.z" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Xe_Äiá»n_nhÃ¡i_Honda_quáº­n_7.jpg.z" />
+    <Content Include="Content\images\bai-viet\tin-tuc\XÃ³a_bá»_thuáº¿_GTGT_Honda_Quáº­n_7.jpg.z" />
+    <Content Include="Content\images\bai-viet\tin-tuc\Äáº§u_Kia_Sportage_Facelift_2019_.jpg.z" />
+    <Content Include="Content\images\bai-viet\tin-tuc\ÄÃ¨n_Kia_Sportage_Facelift_2019_.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\An_toÃ n_Vá»¯ng_táº§m.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\ay_náº¯m_cá»­a_máº¡_crÃ´m.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\Cháº¿_Äá»_há»_trá»£_khá»i_hÃ nh_ngang_dá».jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\Cháº¿_Äá»_khá»i_Äá»ng_báº±ng_nÃºt_báº¥m.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\Cháº¿_Äá»_kiá»m_soÃ¡t_hÃ nh_trÃ¬nh.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\Cáº£m_biáº¿n_lÃ¹i.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\Cá»p_xe_rá»ng_rÃ£i.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\Cá»¥m_ÄÃ¨n_trÆ°á»c_LED.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\Cá»­a_giÃ³_Äiá»u_hoÃ .jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\Há»_thá»ng_Audio.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\Há»_thá»ng_chá»ng_bÃ³_cá»©ng_phanh_AB.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\Há»_thá»ng_cÃ¢n_báº±ng_Äiá»n_tá»­_VSA_.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\Há»_thá»ng_Ã¢m_thanh_8_loa.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\Há»_thá»ng_Äiá»u_hoÃ _tá»±_Äá»ng.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\Há»c_chá»©a_Äá»_cá»§a_xe_thuáº­n_tiá»n.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\Há»c_Äá»±ng_cá»c_tiá»n_dá»¥ng.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\Há»c_Äá»±ng_Äá»_gháº¿.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\Há»c_Äá»±ng_Äá»_tá»±a_tay_gháº¿_lÃ¡i_thiáº¿ - Copy 1.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\Há»p_sá»_tá»±_Äá»ng_vÃ´_cáº¥p_CVT_.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\HÃ ng_gháº¿_sau_Ãªm_Ã¡i.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\ISOFix_MÃ³c_gháº¿_an_toÃ n.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\Khung_háº¥p_thu_lá»±c_an_toÃ n_G_CON.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\KÃ­nh_cháº¯n_náº¯ng.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\La_ZÄng_thiáº¿t_káº¿.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\Láº«y_chuyá»n_sá»_tay_thÃ´ng_minh.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\Ngoáº¡i_tháº¥t_phong_cÃ¡ch_thá»_thao.7b.delayed.z" />
+    <Content Include="Content\images\xe\honda-city-2017\NgÄn_Äá»±ng_vÃ­_gháº¿_lÃ¡i_tiá»n_lá»£i.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\Ná»i_tháº¥t_Äáº¦Y_Cáº¢M_Há»¨NG.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\Tay_lÃ¡i_trá»£_lá»±c_Äiá»n.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\Tay_lÃ¡i_trá»£_lá»±c_Äiá»n_mang_Äáº¿n_ph.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\Thiáº¿t_káº¿_Äáº§u_xe_áº¥n_tÆ°á»£ng.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\Trang_bá»_há»_thá»ng_ÄÃ¨n_sÆ°Æ¡ng_mÃ¹_L.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\Váº­n_hÃ nh_Máº NH_Máº¼.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\VÃ´_lÄng_tÃ­ch_há»£p.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\Äng_ten_vÃ¢y_cÃ¡_máº­p.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\Äá»ng_cÆ¡_1.5l i-vtec sohc.jpg.z" />
+    <Content Include="Content\images\xe\honda-city-2017\ÄÃ¨n_phanh_treo_cao_tÄng.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\black_honda_CRV_quáº­n_7.png.z" />
+    <Content Include="Content\images\xe\honda-cvr\Camera_lÃ¹i_3_gÃ³c_honda_CRV_quáº­n_.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\Cháº¿_Äá»_cáº£nh_bÃ¡o_chá»ng_buá»n_ngá»§_.gif.z" />
+    <Content Include="Content\images\xe\honda-cvr\Cháº¿_Äá»_cáº£nh_bÃ¡o_honda_CRV_quáº­n.gif.z" />
+    <Content Include="Content\images\xe\honda-cvr\Cháº¿_Äá»_ga_honda_CRV_quáº­n_7.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\Cháº¿_Äá»_giá»¯_phanh_táº¡m_thá»i_hond.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\Cháº¿_Äá»_khá»i_hÃ nh_honda_CRV_quáº­.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\Cháº¿_Äá»_khá»i_hÃ nh_ngang_dá»c_HSA_h.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\Cháº¿_Äá»_lÃ¡i_tiáº¿t_kiá»m_honda_CRV.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\chá»©a_Äá»_tiá»n_dá»¥ng_honda_Crv_qu.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\Chá»©c_nÄng_hÆ°á»ng_dáº«n_honda_CRV_.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\Chá»©c_nÄng_khoÃ¡_cá»­a_tá»±_Äá»ng_honda.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\Cáº£m_biáº¿n_gáº¡t_mÆ°a_honda_CRV_quáº­n_.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\Cáº£m_biáº¿n_lÃ¹i_cáº£nh_bÃ¡o_báº±ng_Ã¢m_th.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\Cáº£n_trÆ°á»c_ná»i_báº­t_honda_quáº­n_7.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\Cá»ng_káº¿t_ná»i_HDMI_USB_á»_sáº¡c_Äi.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\Cá»¥m_ÄÃ¨n_háº­u_LED_honda_quáº­n_7.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\Cá»¥m_ÄÃ¨n_trÆ°á»c_Full_LED_honda_q.png.z" />
+    <Content Include="Content\images\xe\honda-cvr\Cá»­a_giÃ³_Äiá»u_hoÃ _honda_CRV_quáº­.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\Cá»­a_giÃ³_Äiá»u_hÃ²a_3_honda_CRV_q.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\CÃ¡c_thanh_náº¹p_máº¡_crÃ´m_trÃªn_cáº£n_t.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\dá»_dÃ ng_quan_sÃ¡t_honda_quáº­n_7.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\green_honda_CRV_quáº­n_7.png.z" />
+    <Content Include="Content\images\xe\honda-cvr\grey_honda_CRV_quáº­n_7.png.z" />
+    <Content Include="Content\images\xe\honda-cvr\GÆ°Æ¡ng_chiáº¿u_háº­u_gáº­p_Äiá»n_honda.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\HONDA_CR_V_AN_TOÃN_Tá»I_ÄA_hond.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\Há»_thá»ng_cÃ¢n_báº±ng_honda_CRV_qu.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\Há»_thá»ng_há»_trá»£_Äá»ng_bá»_honda_.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\Há»_thá»ng_há»_trá»£_ÄÃ¡nh_lÃ¡i_honda_C.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\Há»_thá»ng_khung_gáº§m_honda_CRV_q.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\Há»_thá»ng_Äiá»u_hÃ²a_tá»±_Äá»ng_honda_.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\Há»c_Äá»±ng_kÃ­nh_rÃ¢m_thuáº­n_tiá»n_h.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\Há»p_sá»_vÃ´_cáº¥p_tiÃªn_tiáº¿n_honda_.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\Khi_Äá»ng_bá»_vá»i_Smartphone_honda.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\Khung_xe_sá»­_dá»¥ng_thÃ©p_honda_CRV_.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\KhÃ´ng_gian_bá»_trung_tÃ¢m_honda_.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\La_zÄng_thiáº¿t_káº¿_phÃ¡_cÃ¡ch_hond.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\Láº«y_chuyá»n_sá»_honda_CRV_quáº­n_7.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\MÃ n_hÃ¬nh_cáº£m_á»©ng_7_inch_honda_CR.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\Ná»I_THáº¤T_CR_V_Rá»NG_RÃI_honda_C.b6.delayed.z" />
+    <Content Include="Content\images\xe\honda-cvr\Phanh_tay_Äiá»n_tá»­_honda_CRV_qu.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\red_honda_CRV_quáº­n_7.png.z" />
+    <Content Include="Content\images\xe\honda-cvr\Tay_náº¯m_cá»­a_phÃ­a_trÆ°á»c_honda_qu.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\thiáº¿t_káº¿_thÃ´ng_minh_honda_CRV_.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\Truy_cáº­p_Website_honda_CRV_quáº­n_.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\Trá»£_lá»±c_lÃ¡i_Äiá»n_honda_CRV_quáº­.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\tÃ¬nh_huá»ng_lÃ¹i_honda_CRV_quáº­n_7.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\VÃ´_lÄng_tÃ­ch_há»£p_honda_CRV_quáº­n_.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\white_honda_CRV_quáº­n_7.png.z" />
+    <Content Include="Content\images\xe\honda-cvr\á»ng_xáº£_kÃ©p_tÄng_cháº¥t_thá»_thao_.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\á»¨ng_dá»¥ng_báº£n_Äá»_vÃ _dáº«n_ÄÆ°á»ng_hon.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\Äng_ten_vÃ¢y_cÃ¡_máº­p_honda_CRV_q.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\ÄÃ¨n_bÃ¡o_phanh_honda_CRV_quáº­n_7.jpg.z" />
+    <Content Include="Content\images\xe\honda-cvr\ÄÃ¨n_Äá»c_báº£n_Äá»_tiá»n_Ã­ch_honda_.jpg.z" />
+    <Content Include="Content\images\xe\honda-jazz\Camera_lÃ¹i_3_gÃ³c_quay_honda_ja.jpg.z" />
+    <Content Include="Content\images\xe\honda-jazz\Cháº¿_Äá»_Cruise_Control_honda_ja.jpg.z" />
+    <Content Include="Content\images\xe\honda-jazz\Cháº¿_Äá»_há»_trá»£_khá»i_hÃ nh_ngang_dá».jpg.z" />
+    <Content Include="Content\images\xe\honda-jazz\ChÃ¬a_khoÃ¡_thÃ´ng_minh_honda_jaz.jpg.z" />
+    <Content Include="Content\images\xe\honda-jazz\Cá»¥m_Äá»ng_há»_phong_cÃ¡ch_honda_q.jpg.z" />
+    <Content Include="Content\images\xe\honda-jazz\Cá»¥m_ÄÃ¨n_Full_LED_Honda_Jazz_2018.jpg.z" />
+    <Content Include="Content\images\xe\honda-jazz\CÃ¡nh_lÆ°á»t_giÃ³_Honda_Jazz_2018.jpg.z" />
+    <Content Include="Content\images\xe\honda-jazz\GÆ°Æ¡ng_chiáº¿u_háº­u_honda_jazz_2018.jpg.z" />
+    <Content Include="Content\images\xe\honda-jazz\honda_jazz_2018_má»i_náº»o_ÄÆ°á»ng.jpg.z" />
+    <Content Include="Content\images\xe\honda-jazz\Há»_thá»ng_audio_honda_quáº­n_7.jpg.z" />
+    <Content Include="Content\images\xe\honda-jazz\Há»_thá»ng_chá»ng_bÃ³_cá»©ng_phanh_AB.jpg.z" />
+    <Content Include="Content\images\xe\honda-jazz\Há»_thá»ng_cÃ¢n_báº±ng_Äiá»n_tá»­_VSA_.jpg.z" />
+    <Content Include="Content\images\xe\honda-jazz\Há»c_ÄÃ¨n_sÆ°Æ¡ng_mÃ¹_honda_jazz_2018.jpg.z" />
+    <Content Include="Content\images\xe\honda-jazz\Há»c_chá»©a_Äá»_honda_jazz_2018_qu.jpg.z" />
+    <Content Include="Content\images\xe\honda-jazz\Há»c_Äá»±ng_Äá»_trung_tÃ¢m_honda_ja.jpg.z" />
+    <Content Include="Content\images\xe\honda-jazz\Há»p_sá»_vÃ´_cáº¥p_CVT_Honda_Jazz.jpg.z" />
+    <Content Include="Content\images\xe\honda-jazz\Khung_háº¥p_thá»¥_lá»±c_an_toÃ n_G_CON_.jpg.z" />
+    <Content Include="Content\images\xe\honda-jazz\La_zÄng_honda_jazz_2018.jpg.z" />
+    <Content Include="Content\images\xe\honda-jazz\Láº«y_sá»_tay_tÃ­ch_há»£p_trÃªn_vÃ´_lÄng.jpg.z" />
+    <Content Include="Content\images\xe\honda-jazz\NgÄn_Äá»±ng_ly_honda_jazz_2018_q.jpg.z" />
+    <Content Include="Content\images\xe\honda-jazz\Ná»I_THáº¤T_BIáº¾N_HOÃ_HONDA_JAZZ_2.jpg.z" />
+    <Content Include="Content\images\xe\honda-jazz\Ná»I_THáº¤T_THÃ_Vá»_HONDA_JAZZ_201.jpg.z" />
+    <Content Include="Content\images\xe\honda-jazz\Tay_lÃ¡i_trá»£_lá»±c_Äiá»n_honda_jaz.jpg.z" />
+    <Content Include="Content\images\xe\honda-jazz\VÃ´_lÄng_tÃ­ch_há»£p_honda_quáº­n_7.jpg.z" />
+    <Content Include="Content\images\xe\honda-jazz\Xáº¿p_háº¡ng_5_sao_cao_nháº¥t_honda_.jpg.z" />
+    <Content Include="Content\images\xe\honda-jazz\Äiá»u_hÃ²a_tá»±_Äá»ng_honda_quáº­n_7.jpg.z" />
+    <Content Include="Content\images\xe\honda-jazz\Äá»ng_cÆ¡_1.5l i-vtec sohc - honda jazz 2018 quáº­n 7.jpg.z" />
+    <Content Include="Content\themes\default\fonts\flexslider-icon.eot" />
+    <Content Include="Content\themes\default\fonts\flexslider-icon.ttf" />
+    <Content Include="Content\themes\default\fonts\flexslider-icon.woff" />
+    <Content Include="Content\themes\default\fonts\flexslider-icond41d.eot" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64658</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44391/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
