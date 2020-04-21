@@ -60,10 +60,10 @@
         <div class="container">
             <a href="index.html" class="left"><img id="logo" class="left" height="90" src="~/Content/images/home/logohonda.png" alt="Logo Honda Ôtô"></a>
             <ul class="menu right">
-                <li><a href="index.html">Trang chủ</a></li>
-                <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+                <li><a href="@Url.Action("Index","Home")">Trang chủ</a></li>
+                <li><a href="@Url.Action("About","Home")">Giới thiệu</a></li>
                 <li>
-                    <a href="san-pham.html">Sản phẩm</a>
+                    <a href="@Url.Action("Product","Home")">Sản phẩm</a>
                     <div class="sub">
                         <div class="container">
                             <ul>
@@ -151,8 +151,8 @@
                 <li><a href="phu-kien.html">Phụ kiện</a></li>
                 <li><a href="bang-gia.html">Bảng giá</a></li>
                 <li><a href="khuyen-mai.html">Khuyến mãi</a></li>
-                <li><a href="tin-tuc.html">Tin tức</a></li>
-                <li><a href="lien-he.html">Liên hệ</a></li>
+                <li><a href="@Url.Action("News","Home")">Tin tức</a></li>
+                <li><a href="@Url.Action("Contact","Home")">Liên hệ</a></li>
                 <li><a href="https://www.facebook.com/ShowroomHondaotoquan7" target="_blank"><img src="~/Content/statics/icon-1.png" alt="Social Facebook"></a></li>
                 <li><a href="https://www.youtube.com/channel/UCqIykUanceG1_VwqGxjQE4Q" target="_blank"><img src="~/Content/statics/icon-2.png" alt="Social Youtube"></a></li>
             </ul>

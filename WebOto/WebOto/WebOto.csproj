@@ -291,6 +291,7 @@
     <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\8.jpg" />
     <Content Include="Content\images\hondaoto.info\images\xe\honda-hr-v\9.jpg" />
     <Content Include="Content\images\hondaoto.info\images\xe\thumb\brio.png" />
+    <Content Include="Content\images\hondasaigonquan7.jpg" />
     <Content Include="Content\images\xehay_honda_accord_2019_301118_1.jpg" />
     <Content Include="Content\images\xehay_Honda_Accord_2019_Thailand.jpg" />
     <Content Include="Content\images\xehay_honda_accord_21032019_2.jpg" />
@@ -663,6 +664,13 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Product.cshtml" />
+    <Content Include="Views\Home\Accessories.cshtml" />
+    <Content Include="Views\Home\PriceList.cshtml" />
+    <Content Include="Views\Home\Promotion.cshtml" />
+    <Content Include="Views\Home\News.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
