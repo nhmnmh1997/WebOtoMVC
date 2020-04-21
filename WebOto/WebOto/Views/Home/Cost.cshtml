@@ -1,0 +1,160 @@
+﻿
+@{
+    ViewBag.Title = "Cost";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="page-fee">
+    <div class="container">
+        <h1>Ước tính chi phí mua xe ôtô Honda</h1>
+        <p class="notes"><i>Mức biểu phí dưới đây là tạm tính và có thể thay đổi do sự thay đổi của thuế và các bên cung cấp dịch vụ khác. Mức bảo hiểm đã gồm 10% VAT.</i></p>
+        <div class="row">
+            <div class="col col-6">
+                <p>
+                    <form id="frm-car" method="get">
+                        <label>Chọn xe</label>
+                        <select class="input-txt" name="car" onchange='$("#frm-car").submit();'>
+                            <option>Chọn dòng xe</option>
+                            <option value="7">Xe Honda Jazz</option>
+                            <option value="8">Xe Honda Brio 2019</option>
+                            <option value="1">Xe Honda City</option>
+                            <option value="3">Xe Honda Civic 2019</option>
+                            <option value="4">Xe Honda CR-V</option>
+                            <option value="6">Xe Honda Accord 2019</option>
+                            <option value="5">Xe Honda HR-V</option>
+                        </select>
+                    </form>
+                </p>
+                <p>
+                    <label>Phiên bản</label>
+                    <select class="input-txt" id="price" name="option">
+                    </select>
+                </p>
+                <p>
+                    <label>Nơi đăng ký trước bạ</label>
+                    <select class="input-txt" id="local" name="loc">
+                        <option value="11000000">Hồ Chí Minh</option>
+                        <option value="20000000">Hà Nội</option>
+                        <option value="1000000">Tỉnh thành khác</option>
+                    </select>
+                </p>
+                <p>
+                    <label>Khoảng trả trước (Nếu mua trả góp)</label>
+                    <input class="input-txt text-right" id="deposit" min="0" max="0" value="0">
+                </p>
+                <p>
+                    <label>Thời hạn vay</label>
+                    <select class="input-txt" id="month" name="month">
+                        <option value="12">1 năm</option>
+                        <option value="24">2 năm</option>
+                        <option value="36">3 năm</option>
+                        <option value="48">4 năm</option>
+                        <option value="60">5 năm</option>
+                        <option value="72">6 năm</option>
+                        <option value="84">7 năm</option>
+                        <option value="96">8 năm</option>
+                    </select>
+                </p>
+                <p>
+                    <label>Lãi suất</label>
+                    <input class="input-txt" id="rate" value="8.9">
+                </p>
+                <button onclick="calc();">Ước tính chi phí trả góp</button>
+                <!--<p class="notes"><i>Khu vực II: Gồm các TP trực thuộc trung ương (trừ TP Hà Nội và TP Hồ Chí Minh), các TP trực thuộc tỉnh và các thị xã</i></p>
+                <p class="notes"><i>Khu vực III: Gồm các khu vực khác ngoài khu vực I và khu vực II nêu trên</i></p>-->
+            </div>
+            <div class="col col-6 col-res" id="mobileres">
+                <label>Ước tính giá xe Honda lăn bánh</label>
+                <p>Giá xe (bao gồm VAT)<span class="right" id="res_price">0 VNĐ</span></p>
+                <p>Phí trước bạ (10%)<span class="right" id="res_fee">0 VNĐ</span></p>
+                <p>Phí Biển Số<span class="right" id="res_local">11,000,000 VNĐ</span></p>
+                <p>Phí sử dụng đường bộ<span class="right">1,560,000 VNĐ</span></p>
+                <p>Bảo hiểm TNDS<span class="right">480,000 VNĐ</span></p>
+                <p>Phí kiểm định<span class="right">340,000 VNĐ</span></p>
+
+                <label>Tổng chi phí<span class="right" id="res_total">13,380,000 VNĐ</span></label>
+            </div>
+            <div id="installment-res" class="col col-6 col-res">
+                <label>Ước tính chi phí mua xe Honda trả góp</label>
+                <p>Khoản vay<span class="right" id="res_surplus">0 VNĐ</span></p>
+                <p>Số tiền trả tháng đầu<span class="right" id="res_first">0 VNĐ</span></p>
+                <p>Số tiền trả tháng cuối<span class="right" id="res_last">0 VNĐ</span></p>
+                <p>Số tiền trả trung bình<span class="right" id="res_average">0 VNĐ</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    $(document).ready(function () {
+            $('input#deposit').keyup(function () {
+                var value = parseInt($(this).val());
+                if ($(this).val() !== "") {
+                    value = parseInt($(this).val().replace(/\+/g, ' ').replace(/\,/g, ''));
+                    $(this).val(value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                }
+            });
+            $('input#deposit').change(function () {
+                var min = parseInt($(this).attr("min"));
+                var max = parseInt($(this).attr("max"));
+                var value = parseInt($(this).val());
+                if ($(this).val() !== "") {
+                    value = parseInt($(this).val().replace(/\,/g, ''));
+                    if (value < min) { value = min; }
+                    if (value > max) { value = max; }
+                    $(this).val(value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                } else {
+                    value = min;
+                    $(this).val(value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                }
+            });
+            $('input#deposit').keypress(function (event) {
+                if (event.which != 8 && isNaN(String.fromCharCode(event.which))) {
+                    event.preventDefault(); //stop character from entering input
+                }
+            });
+            $("select").change(function () {
+                fee();
+            });
+            $("select#price").change(function () {
+
+            });
+        });
+
+
+        function fee() {
+            var price = parseInt($("#price").val());
+            var fee = price * 0.1;
+            var local = parseInt($("#local").val());
+            var registration = 340000;
+            var insurance = 480000;
+            var road = 1560000;
+            var total = price + fee + local + registration + insurance + road;
+            $('#res_price').html(price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ' VNĐ');
+            $('#res_fee').html(fee.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ' VNĐ');
+            $('#res_local').html(local.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ' VNĐ');
+            $('#res_total').html(total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ' VNĐ');
+            $('#deposit').val(fee.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+            $('#deposit').attr("min", fee);
+            $('#deposit').attr("max", fee * 9);
+        }
+
+        function calc() {
+            var price = parseInt($("#price").val());
+            var rate = parseFloat($("#rate").val().toString().replace(/\,/g, ''));
+            var deposit = parseInt($("#deposit").val().toString().replace(/\,/g, ''));
+            var month = parseInt($("#month").val());
+            var surplus = price - deposit;
+            $('#res_surplus').html(surplus.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ' VNĐ');
+
+            var amount = surplus / month;
+            var first = Math.floor(amount + (surplus * rate / 1200));
+            $('#res_first').html(first.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ' VNĐ');
+
+            var last = Math.floor(amount + (amount * rate / 1200));
+            $('#res_last').html(last.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ' VNĐ');
+
+            var average = Math.floor((last + first) / 2);
+            $('#res_average').html(average.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ' VNĐ');
+            $('html, body').animate({ scrollTop: $('#mobileres').offset().top - 50 }, 500);
+        }</script>			<div class="clr"></div>
+</section>

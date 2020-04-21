@@ -28,7 +28,7 @@
         height: 26px;
         left: 0;
         top: 10px;
-        background-image: url("statics/social.png");
+        background-image: url("/Content/statics/social.png");
         background-repeat: no-repeat;
         background-color: #666;
         background-size: 89px;
@@ -71,7 +71,12 @@
         margin: 5px 0;
         font-size: 14px;
     }
-
+    .text-right{
+        text-align: right;
+    }
+.text-left {
+    text-align: left;
+}
 @media (max-width: 768px) {
     .col {
         width: 100%;
@@ -105,4 +110,170 @@
             width: calc(100% - 170px);
             float: right;
         }
+}
+
+
+#page-price h1 {
+    font-size: 30px;
+    margin: 60px 0 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #E11428;
+}
+
+#page-price table td a.tool {
+    display: inline-block;
+    line-height: 35px;
+    background: #e11428;
+    color: #fff;
+    padding: 0 15px;
+    border-radius: 50px;
+    margin: 0 10px 20px;
+}
+
+#page-price table td .thumb {
+    width: 380px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#page-price table tr td:nth-child(2) {
+    padding: 0 40px;
+    width: 400px;
+}
+
+#page-price table td h3 {
+    font-size: 18px;
+    color: #333;
+    text-transform: uppercase;
+    border-bottom: 1px solid;
+    margin-bottom: 20px;
+    ;
+}
+
+#page-price table tr td:nth-child(2) ul li {
+    font-size: 14px;
+    margin-bottom: 10px;
+    line-height: 18px;
+    list-style-type: circle;
+    margin-left: 15px;
+}
+
+#page-price table tr td:last-child ul li {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 20px;
+    line-height: 25px;
+    font-size: 14px;
+}
+
+    #page-price table tr td:last-child ul li b {
+        display: block;
+        font-size: 18px;
+        color: #c00;
+    }
+
+@media (max-width: 768px) {
+}
+
+.col-6 {
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin: 60px 0 10px;
+}
+
+.notes {
+    font-size: 18px;
+}
+
+label {
+    font-size: 0.85rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+    margin: 20px 0 10px;
+}
+
+select, input {
+    height: 40px;
+    border: 1px solid;
+    border-color: #d7d7d7;
+    border-bottom-color: #292929;
+    box-shadow: 0 1px 0 0 #292929;
+    padding: 0 15px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: unset;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0 0 15px;
+    /*text-align: right;*/
+}
+
+button {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    background: #e11428;
+    border: 0;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+p > span.right {
+    letter-spacing: 0.5px;
+}
+
+.col-res p {
+    padding: 10px 0;
+    border-bottom: 1px dotted #ccc;
+    margin: 0;
+}
+
+.col-res label {
+    font-size: 20px;
+}
+
+.col-res span {
+    color: #e11428;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 20px;
+        margin: 20px 10px 10px;
+    }
+
+    .notes {
+        font-size: 16px;
+    }
+
+    h1 + .notes {
+        margin: 10px;
+    }
+
+    .col-6 {
+        width: 100%;
+        padding: 0;
+    }
+
+    button {
+        font-size: 18px;
+        margin: 0 auto 20px;
+        display: table;
+    }
+
+    label {
+        font-size: 15px;
+        line-height: 1.4;
+        margin: 10px 0;
+    }
 }

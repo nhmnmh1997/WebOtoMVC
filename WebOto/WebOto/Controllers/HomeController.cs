@@ -31,7 +31,7 @@ namespace WebOto.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
-            return View();
+            return View("~/Views/Shared/Error.cshtml");
         }
 
         public ActionResult PriceList()
@@ -58,5 +58,14 @@ namespace WebOto.Controllers
 
             return View();
         }
+        
+        public ActionResult Cost()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+
     }
 }
