@@ -198,7 +198,7 @@ label {
     text-transform: uppercase;
     font-weight: bold;
     display: block;
-    margin: 20px 0 10px;
+    /*margin: 20px 0 10px;*/
 }
 
 select, input {
@@ -275,5 +275,369 @@ p > span.right {
         font-size: 15px;
         line-height: 1.4;
         margin: 10px 0;
+    }
+}
+
+.specs {
+    max-height: 600px;
+    overflow-x: hidden;
+    margin-bottom: 20px;
+}
+
+    .specs::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        background-color: #F5F5F5;
+    }
+
+    .specs::-webkit-scrollbar {
+        width: 10px;
+        background-color: #F5F5F5;
+    }
+
+    .specs::-webkit-scrollbar-thumb {
+        *-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #D62929;
+    }
+
+#page-product {
+    background: #F7F7F7;
+}
+
+.main-content {
+    box-shadow: 0 3px 3px #999;
+    background: #FFFFFF;
+    padding: 40px 200px 0;
+    font-size: 16px;
+}
+
+    .main-content article img {
+        max-width: 1000px;
+        margin: 0 -200px -15px;
+    }
+
+    .main-content article table {
+        width: 990px;
+        margin: 0 -195px;
+    }
+
+        .main-content article table td {
+            width: 25%;
+            padding: 0 5px 20px;
+            vertical-align: top;
+            font-size: 16px;
+        }
+
+        .main-content article table.td-25 td {
+            width: 25%;
+        }
+
+        .main-content article table img {
+            max-width: 100%;
+            width: 100% !important;
+            height: auto !important;
+            margin: 0;
+        }
+
+    .main-content .car-name {
+        width: 1000px;
+        margin: 0 -200px;
+    }
+
+    .main-content h1 {
+        font-size: 30px;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 10px;
+        display: table;
+        border-bottom: 2px solid #e11428;
+    }
+
+    .main-content article a {
+        border-bottom: 1px solid;
+    }
+
+    .main-content h1 i {
+        color: #e11428;
+    }
+
+    .main-content .meta {
+        font-size: 15px;
+        color: #999;
+        text-align: center;
+        margin: 0 0 20px;
+        font-style: italic;
+    }
+
+    .main-content h2 {
+        border-bottom: 1px solid;
+        display: table;
+        margin: 30px auto 20px;
+        font-size: 22px;
+        text-transform: uppercase;
+    }
+
+    .main-content p, .main-content ul {
+        margin: 0 0 20px;
+    }
+
+        .main-content ul li {
+            list-style-type: disc;
+            margin: 0 0 10px 30px;
+        }
+
+    .main-content .price {
+        margin: 0 -200px;
+        position: relative;
+    }
+
+        .main-content .price .thumb {
+            position: relative;
+        }
+
+            .main-content .price .thumb:after {
+                width: 0;
+                height: 0;
+                content: "";
+                border-bottom: 33px solid #ebebeb;
+                border-right: 32px solid transparent;
+                border-left: 32px solid transparent;
+                margin-left: -32px;
+                position: absolute;
+                bottom: -43px;
+                left: 50%;
+            }
+
+        .main-content .price img {
+            max-width: 100%;
+            margin: 0 auto;
+            border-bottom: 1px solid #bc8420;
+            display: table;
+        }
+
+        .main-content .price .models {
+            width: 100%;
+            float: left;
+            background-color: #ebebeb;
+            margin: 30px 0 0;
+            text-align: center;
+        }
+
+        .main-content .price ul li {
+            list-style-type: none;
+            padding: 50px 0 0;
+            display: inline-block;
+            margin: 0 50px;
+        }
+
+            .main-content .price ul li h3 {
+                text-transform: uppercase;
+                margin: 0 0 10px;
+                font-size: 18px;
+            }
+
+            .main-content .price ul li p {
+                font-size: 18px;
+            }
+
+    .main-content .specs {
+        width: 800px;
+        margin: 0 -100px;
+        max-height: 600px;
+        overflow-x: hidden;
+    }
+
+        .main-content .specs::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            background-color: #F5F5F5;
+        }
+
+        .main-content .specs::-webkit-scrollbar {
+            width: 10px;
+            background-color: #F5F5F5;
+        }
+
+        .main-content .specs::-webkit-scrollbar-thumb {
+            *-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+            background-color: #D62929;
+        }
+
+        .main-content .specs table tr th {
+            background: #ebebeb;
+            border: 1px solid #cccccc;
+            font-size: 16px;
+            text-align: center;
+            padding: 10px 20px;
+        }
+
+        .main-content .specs table tr td {
+            font-size: 14px;
+            padding: 7px 20px;
+            border: 1px solid #cccccc;
+            text-align: center;
+            width: 20%;
+        }
+
+            .main-content .specs table tr td table {
+                margin: -8px -21px;
+                width: calc(100% + 42px);
+            }
+
+                .main-content .specs table tr td table td {
+                    width: 50% !important;
+                }
+
+            .main-content .specs table tr td:first-child {
+                font-weight: 500;
+                text-align: left;
+                *width: 40%;
+            }
+
+            .main-content .specs table tr td[colspan="3"] {
+                width: 60%;
+            }
+
+        .main-content .specs table tr th.full-size {
+            text-align: left;
+        }
+
+        .main-content .specs table tr th.half-size span.half-size, .main-content .specs table tr td.half-size span.half-size {
+            width: 50%;
+            display: block;
+            float: left;
+        }
+
+h3.articles {
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+    h3.articles + div.news {
+        padding-bottom: 20px;
+    }
+
+.news .col:nth-child(4) {
+    clear: both;
+}
+
+.news h3 {
+    margin: 10px 0 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .specs {
+        width: 100%;
+        max-height: 400px;
+        margin: 0;
+        overflow-x: scroll;
+    }
+
+    #page-product .specs table {
+        width: 600px;
+    }
+
+    .main-content {
+        padding: 10px 10px 0;
+        font-size: 16px;
+    }
+
+        .main-content .car-name {
+            width: 100%;
+            margin: 0;
+        }
+
+        .main-content h1 {
+            font-size: 20px;
+        }
+
+        .main-content .meta {
+            margin: 0px 0 10px;
+        }
+
+        .main-content p, .main-content ul {
+            margin: 0 0 15px;
+        }
+
+        .main-content h2 {
+            margin: 15px auto;
+            font-size: 18px;
+        }
+
+        .main-content article img {
+            max-width: calc(100% + 20px);
+            margin: 0 -10px -5px;
+        }
+
+        .main-content article table {
+            width: 100%;
+            margin: 0;
+        }
+
+        .main-content .specs {
+            width: 100%;
+            max-height: 400px;
+            margin: 0;
+            overflow-x: scroll;
+        }
+
+            .main-content .specs > table {
+                width: 600px;
+            }
+
+            .main-content .specs table tr td:first-child {
+                font-weight: 500;
+                text-align: left;
+                width: 30%;
+            }
+
+        .main-content .price {
+            margin: 0 -10px;
+        }
+
+            .main-content .price ul li {
+                padding: 20px 0 0;
+                margin: 0 10px;
+            }
+
+                .main-content .price ul li p {
+                    font-size: 18px;
+                    margin: 0 0 10px;
+                }
+
+        .main-content article table tr, .main-content article table.td-25 tr {
+            display: block;
+        }
+
+        .main-content article table td, .main-content article table.td-25 td {
+            width: 100%;
+            font-size: 16px;
+            display: block;
+            float: left;
+            box-sizing: border-box;
+        }
+
+        .main-content article table.td-25 td {
+            width: 50%;
+            font-size: 16px;
+            display: block;
+            float: left;
+            box-sizing: border-box;
+        }
+
+        .main-content article table.td-25 tr td:nth-child(2n + 1) {
+            clear: both;
+        }
+
+    h3.articles {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .news .col {
+        width: 100%;
     }
 }

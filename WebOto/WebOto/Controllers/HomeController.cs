@@ -26,6 +26,12 @@ namespace WebOto.Controllers
 
             return View();
         }
+        public ActionResult ProductItem()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
 
         public ActionResult Accessories()
         {

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Honda Ôtô Cộng Hòa</title>
     <meta name="description" content="Honda Ôtô Cộng Hòa là đại lý có quy mô lớn bậc nhất khu vực thành phố Hồ Chí Minh đạt tiêu chuẩn 5S từ Honda Ô tô Việt Nam. Chuyên phân phối sản phẩm ô tô Honda chính hãng tại Việt Nam">
-    <link rel="canonical" href="index.html">
+    <link rel="canonical" href="@Url.Action("Index","Home")">
     <meta charset="UTF-8">
     <meta content="INDEX,FOLLOW" name="robots" />
     <meta name="viewport" content="width=device-width" />
@@ -58,7 +58,7 @@
 
     <header>
         <div class="container">
-            <a href="index.html" class="left"><img id="logo" class="left" height="90" src="~/Content/images/home/logohonda.png" alt="Logo Honda Ôtô"></a>
+            <a href="@Url.Action("Index","Home")" class="left"><img id="logo" class="left" height="90" src="~/Content/images/home/logohonda.png" alt="Logo Honda Ôtô"></a>
             <ul class="menu right">
                 <li><a href="@Url.Action("Index","Home")">Trang chủ</a></li>
                 <li><a href="@Url.Action("About","Home")">Giới thiệu</a></li>
